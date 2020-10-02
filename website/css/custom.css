@@ -1,0 +1,89 @@
+/*assigning values in variables*/
+:root {
+    --main-bg-color: #EDEDED;
+    --main-txt-color: #323232;  
+    --main-padding: 15px; 
+} 
+
+/*body*/
+
+#submit{
+    border-radius: 7px;
+    padding: var(--main-padding);
+    background-color: crimson;
+    color:white;
+    outline: 0 !important;  /*remove border outline when click*/
+    
+}
+
+#form{
+    border-radius: 7px;
+    border-style: solid 2px;
+    border-color: black;
+    padding: var(--main-padding);
+    background-color:wheat;
+    color:black;
+    outline: 0 !important;  /*remove border outline when click*/
+}
+
+/* login form animation */
+
+    *{
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body{
+        align-items: center;
+        justify-content: center;
+        font-family: "Comfortaa", "sans-serif";
+        background: #040404;
+        text-align: center;
+    }
+
+    label{
+        position: relative;
+    }
+
+    label input{
+        font-family: "Comfortaa", "sans-serif";
+        font-size: 1rem;
+        color: #f9f9f9;
+        background: transparent;
+        padding: 1rem 1.2rem;
+        min-width: 24rem;
+        border-radius: 0.2rem;
+        border: 2px solid #7a7a7a56;
+        transition: border-color 0.2s;
+    }
+
+    label input:focus{
+        border-color:#6BAB90;
+    }
+
+    label p{
+        color: #f9f9f9;
+        font-size: 1rem;
+        user-select: none;
+        position: absolute;
+        top: 35%;
+        transform: translate(-50%);
+        padding: 0 0.4rem;
+        background: #040404;
+        transition: top 0.2s, font-size 0.2s, color 0.2s;
+    }
+
+    label input:focus + p,
+    label input:not(:placeholder-shown) + p {
+        top: 0;
+        font-size: 0.9rem;
+        color: #6BAB90;
+    }
+
+    label input:not(:focus) + p {
+        color: #355548;
+    }

@@ -1,0 +1,63 @@
+{% extends 'style.html' %}
+{% block content %}
+
+<h1 style="color: aqua;">Login Page</h1><br>
+
+<form method="POST" action="create">
+{% csrf_token %}
+
+    <!--first name-->
+    <label>
+      <input name="first_name" id="first_name" type="text" placeholder="">
+      <p style="margin-left: 60px;">Fist name</p>
+    </label>
+   <span id="error_first_name" style="visibility: hidden;">*</span>
+    <br><br>
+
+    <!--last name-->
+    <label>
+      <input name="last_name" id="last_name" type="text" placeholder="">
+      <p style="margin-left: 60px;">Last name</p>
+    </label>
+    <span id="error_last_name" style="visibility: hidden;">*</span>
+    <br><br>
+
+    <!--email-->
+    <label>
+      <input name="email" id="email" type="text" placeholder="">
+      <p style="margin-left: 60px;">Email ID</p>
+    </label>
+    <span id="error_email" style="visibility: hidden;">*</span>
+    <br><br>
+
+    <!--username-->
+    <label>
+      <input name="username" id="username" type="text" placeholder="">
+      <p style="margin-left: 60px;">Username</p>
+    </label>
+    <span id="error_username" style="visibility: hidden;">*</span>
+    <br><br>
+
+    <!--password-->
+    <label>
+      <input name="password" id="password" type="password" placeholder="">
+      <p style="margin-left: 60px;">Password</p>
+    </label>
+    <span id="error_password" style="visibility: hidden;">*</span>
+    <br><br>
+
+    <!--re-password-->
+    <label>
+      <input name="repassword" id="repassword" type="password" placeholder="">
+      <p style="margin-left: 95px;">Re-enter password</p>
+    </label>
+    <span id="error_repassword" style="visibility: hidden;">*</span>
+    <br><br>
+
+
+
+    <button type="submit" id="submit">Submit</button>
+  </form>
+
+
+{% endblock %}
